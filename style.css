@@ -1,0 +1,1388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #29251f;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffdf8;
+    border-bottom: 1px solid #e8e1d5;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #29251f;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #8b5e34;
+}
+
+.login-btn {
+    border: 1px solid #29251f;
+    background: transparent;
+    padding: 11px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login-btn:hover {
+    background: #29251f;
+    color: white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(
+            rgba(248, 245, 239, 0.88),
+            rgba(248, 245, 239, 0.88)
+        );
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #756b5f;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #8b5e34;
+}
+
+.description {
+    max-width: 550px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #6e665c;
+}
+
+.find-btn {
+    margin-top: 35px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.find-btn:hover {
+    background: #8b5e34;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 50px 8%;
+    background: white;
+}
+
+.feature {
+    text-align: center;
+    padding: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #f0e7da;
+    color: #8b5e34;
+    font-size: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .login-btn {
+        padding: 9px 15px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 35px 8%;
+    }
+}
+
+
+/* ================= SMALL PHONE ================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .small-text {
+        font-size: 13px;
+    }
+
+    .find-btn {
+        width: 100%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #29251f;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffdf8;
+    border-bottom: 1px solid #e8e1d5;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #29251f;
+}
+
+.login-btn {
+    border: 1px solid #29251f;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main {
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #756b5f;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #8b5e34;
+}
+
+.description {
+    color: #6e665c;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.find-btn {
+    margin-top: 30px;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 50px 8%;
+    background: white;
+}
+
+.feature {
+    text-align: center;
+    padding: 25px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0e7da;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* CITY SECTION */
+
+.city-section {
+    display: flex;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.city-card {
+    width: 100%;
+    max-width: 550px;
+    padding: 45px 30px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.city-card h2 {
+    font-size: 38px;
+    margin: 20px 0 30px;
+}
+
+.location-btn,
+.manual-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.location-btn {
+    border: none;
+    background: #29251f;
+    color: white;
+}
+
+.manual-btn {
+    border: 1px solid #29251f;
+    background: white;
+}
+
+.or {
+    margin: 18px 0;
+    color: #888;
+}
+
+#cityMessage {
+    margin-top: 25px;
+    font-weight: bold;
+    color: #8b5e34;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .find-btn {
+        width: 100%;
+    }
+}
+/* CITY BUTTONS */
+
+.city-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.city-list button {
+    padding: 15px;
+    border: 1px solid #29251f;
+    border-radius: 15px;
+    background: white;
+    color: #29251f;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.city-list button:hover {
+    background: #f0e7da;
+}
+
+.city-list button.selected {
+    background: #29251f;
+    color: white;
+}
+
+#cityMessage {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8b5e34;
+}
+
+.next-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: #8b5e34;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .city-list {
+        grid-template-columns: 1fr;
+    }
+
+    .city-card h2 {
+        font-size: 32px;
+    }
+}
+.mood-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.mood-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.mood-card h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+
+.mood-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.mood-list button {
+    padding: 14px;
+    border: 1px solid #29251f;
+    border-radius: 15px;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mood-list button.selected {
+    background: #29251f;
+    color: white;
+}
+
+#moodMessage {
+    margin-top: 20px;
+    color: #8b5e34;
+    font-weight: bold;
+}
+
+.mood-next-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* PEOPLE & BUDGET SECTION */
+
+.people-budget-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.people-budget-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.people-budget-card h2 {
+    font-size: 34px;
+    margin: 20px 0 30px;
+}
+
+.people-budget-card h3 {
+    text-align: left;
+    margin: 20px 0 12px;
+    font-size: 18px;
+}
+
+.people-list,
+.budget-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.people-list button,
+.budget-list button {
+    padding: 14px;
+    border: 1px solid #29251f;
+    border-radius: 15px;
+    background: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.people-list button.selected,
+.budget-list button.selected {
+    background: #29251f;
+    color: white;
+}
+
+#peopleBudgetMessage {
+    margin-top: 20px;
+    color: #8b5e34;
+    font-weight: bold;
+}
+
+.people-next-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .people-budget-card {
+        padding: 30px 20px;
+    }
+
+    .people-budget-card h2 {
+        font-size: 28px;
+    }
+
+    .people-list,
+    .budget-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* RESULTS SECTION */
+
+.results-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.results-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+}
+
+.results-card > .small-text {
+    text-align: center;
+}
+
+.results-card h2 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 20px 0 30px;
+}
+
+.brief-box {
+    padding: 25px;
+    background: #f8f5ef;
+    border-radius: 18px;
+}
+
+.brief-box h3 {
+    margin-bottom: 15px;
+}
+
+.brief-box p {
+    margin: 8px 0;
+}
+
+.edit-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: 1px solid #29251f;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.apply-btn {
+    width: 100%;
+    margin: 25px 0;
+    padding: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.filter-row h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.filter-row select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #29251f;
+    border-radius: 12px;
+    background: white;
+}
+
+.clear-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: 1px solid #29251f;
+    border-radius: 30px;
+    background: white;
+    cursor: pointer;
+}
+
+#filterMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: #8b5e34;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .results-card {
+        padding: 30px 20px;
+    }
+
+    .results-card h2 {
+        font-size: 28px;
+    }
+
+    .filter-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* VENUE CARDS */
+
+.venue-results {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.venue-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd5ca;
+    border-radius: 20px;
+    background: white;
+}
+
+.venue-image {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+    border-radius: 16px;
+    font-size: 50px;
+}
+
+.venue-info {
+    flex: 1;
+}
+
+.venue-info > span {
+    font-size: 13px;
+    color: #8b5e34;
+    font-weight: bold;
+}
+
+.venue-info h3 {
+    margin: 6px 0;
+    font-size: 22px;
+}
+
+.venue-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.venue-info button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #29251f;
+    color: white;
+    cursor: pointer;
+}
+
+.venue-info button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+
+    .venue-card {
+        flex-direction: column;
+    }
+
+    .venue-image {
+        width: 100%;
+        height: 150px;
+    }
+
+    .venue-info h3 {
+        font-size: 20px;
+    }
+}
+/* MOBILE CARD FIX */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.venue-card {
+    min-width: 0;
+}
+
+.venue-info {
+    min-width: 0;
+}
+
+.venue-info h3,
+.venue-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+
+    .venue-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .venue-image {
+        width: 100%;
+        height: 140px;
+    }
+
+    .venue-info {
+        width: 100%;
+    }
+
+    .venue-info h3 {
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .venue-info p {
+        white-space: nowrap;
+    }
+
+    .venue-info button {
+        width: 100%;
+    }
+}
+/* BOOKING POPUP */
+
+.booking-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.booking-box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.booking-box h2 {
+    margin: 15px 0 10px;
+    font-size: 28px;
+}
+
+.booking-box p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.close-booking {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.confirm-booking {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* SUSHMAP FINAL POLISH */
+
+.header {
+    padding: 18px 6%;
+    border-bottom: 1px solid #e5ded4;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header nav a {
+    transition: 0.2s;
+}
+
+.header nav a:hover {
+    opacity: 0.6;
+}
+
+.login-btn,
+.find-btn,
+.next-btn,
+.mood-next-btn,
+.people-next-btn {
+    transition: 0.2s;
+}
+
+.login-btn:hover,
+.find-btn:hover,
+.next-btn:hover,
+.mood-next-btn:hover,
+.people-next-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.city-card,
+.mood-card,
+.people-budget-card,
+.results-card {
+    box-shadow: 0 12px 35px rgba(41, 37, 31, 0.08);
+}
+
+.city-list button,
+.mood-list button,
+.people-list button,
+.budget-list button {
+    transition: 0.2s;
+}
+
+.city-list button:hover,
+.mood-list button:hover,
+.people-list button:hover,
+.budget-list button:hover {
+    transform: translateY(-2px);
+    background: #f1ede7;
+}
+/* LOGIN SECTION */
+
+.login-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(41, 37, 31, 0.08);
+}
+
+.login-card h2 {
+    font-size: 34px;
+    margin: 15px 0 30px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 14px;
+    border: 1px solid #d8d0c5;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #29251f;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-close-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: 1px solid #29251f;
+    border-radius: 30px;
+    background: white;
+    color: #29251f;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#loginMessage {
+    margin-top: 18px;
+    color: #8b5e34;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .login-card {
+        padding: 35px 20px;
+    }
+
+    .login-card h2 {
+        font-size: 28px;
+    }
+}
+/* PROFILE SECTION */
+
+.profile-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(41, 37, 31, 0.08);
+}
+
+.profile-card h2 {
+    font-size: 36px;
+    margin: 15px 0 8px;
+}
+
+.profile-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.profile-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 25px;
+    background: #f8f5ef;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.profile-option span {
+    font-size: 30px;
+}
+
+.profile-option h3 {
+    margin-bottom: 5px;
+}
+
+.profile-option p {
+    color: #666;
+    font-size: 14px;
+}
+
+.profile-continue-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile-continue-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 35px 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 28px;
+    }
+}
+/* EXPLORE SECTION */
+
+.explore-section {
+    display: none;
+    min-height: 100vh;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f5ef, #fff);
+}
+
+.explore-card {
+    max-width: 650px;
+    text-align: center;
+}
+
+.explore-card h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.explore-card h1 span {
+    color: #8b5e34;
+}
+
+.explore-description {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.explore-card .find-btn {
+    padding: 16px 35px;
+    border: none;
+    border-radius: 35px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .explore-card h1 {
+        font-size: 38px;
+    }
+
+    .explore-description {
+        font-size: 16px;
+    }
+}
+/* MY BOOKINGS SECTION */
+
+.bookings-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.bookings-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(41, 37, 31, 0.08);
+}
+
+.bookings-card h2 {
+    font-size: 36px;
+    margin: 15px 0 30px;
+}
+
+.no-booking {
+    padding: 25px;
+    background: #f8f5ef;
+    border-radius: 15px;
+    color: #666;
+}
+
+.back-home-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #29251f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-home-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .bookings-card {
+        padding: 35px 20px;
+    }
+
+    .bookings-card h2 {
+        font-size: 28px;
+    }
+}
+/* BOOKING ITEM */
+
+.booking-item {
+    padding: 20px;
+    margin-top: 15px;
+    background: #f8f5ef;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.booking-item h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.booking-item p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.booking-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8b5e34;
+}
+/* SUPPORT SECTION */
+
+.support-section {
+    display: none;
+    min-height: 550px;
+    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    background: #f8f5ef;
+}
+
+.support-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(41, 37, 31, 0.08);
+}
+
+.support-card h2 {
+    font-size: 36px;
+    margin: 15px 0 30px;
+}
+
+.support-option {
+    padding: 18px;
+    margin-bottom: 15px;
+    background: #f8f5ef;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.support-option h3 {
+    margin-bottom: 6px;
+}
+
+.support-option p {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .support-card {
+        padding: 35px 20px;
+    }
+
+    .support-card h2 {
+        font-size: 28px;
+    }
+}
+/* VENUE IMAGE */
+
+.venue-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}

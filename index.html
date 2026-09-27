@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sushmap</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Sushmap</div>
+
+        <nav>
+    <a href="#" onclick="showExplore(); return false;">Explore</a>
+    <a href="#" onclick="showBookings(); return false;">My Bookings</a>
+    <a href="#" onclick="showSupport(); return false;">Support</a>
+</nav>
+
+        <button class="login-btn" onclick="login()">
+            Login / Sign Up
+        </button>
+    </header>
+
+
+    <!-- Main Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-text">
+                    Discover the best value for money stuff nearby
+                </p>
+
+                <h1>
+                    Place, taste,<br>
+                    <span>Budget found.</span>
+                </h1>
+
+                <p class="description">
+                    Find the perfect place according to your
+                    mood, budget and requirements.
+                </p>
+
+                <button class="find-btn" onclick="findPlaces()">
+                    Find My Places
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features">
+
+            <div class="feature">
+                <div class="icon">★</div>
+                <h3>Real Reviews</h3>
+                <p>Know what people really think.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">⌖</div>
+                <h3>Located Locally</h3>
+                <p>Discover places near you.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">✓</div>
+                <h3>Book in Few Steps</h3>
+                <p>Simple and quick booking.</p>
+            </div>
+
+        </section>
+
+    </main>
+<section class="city-section" id="citySection">
+
+    <div class="city-card">
+
+        <p class="small-text">
+            Discover the best value for money stuff nearby
+        </p>
+
+        <h2>Select your city</h2>
+
+        <div class="city-list">
+
+            <button onclick="chooseCity('Bareilly')">
+                Bareilly
+            </button>
+
+            <button onclick="chooseCity('Aligarh')">
+                Aligarh
+            </button>
+
+            <button onclick="chooseCity('Delhi')">
+                Delhi
+            </button>
+
+            <button onclick="chooseCity('Lucknow')">
+                Lucknow
+            </button>
+
+        </div>
+
+        <p id="cityMessage"></p>
+
+        <button class="next-btn" onclick="nextStep()">
+            Next →
+        </button>
+
+    </div>
+
+</section>
+<!-- MOOD SECTION -->
+
+<section class="mood-section" id="moodSection">
+
+    <div class="mood-card">
+
+        <p class="small-text">
+            Discover the best value for money stuff nearby
+        </p>
+
+        <h2>
+            We will find spaces<br>
+            that fit the mood.
+        </h2>
+
+        <div class="mood-list">
+
+            <button onclick="chooseMood('Party')">Party</button>
+
+            <button onclick="chooseMood('Dinner')">Dinner</button>
+
+            <button onclick="chooseMood('Wedding')">Wedding</button>
+
+            <button onclick="chooseMood('Engagement')">Engagement</button>
+
+            <button onclick="chooseMood('Anniversary')">Anniversary</button>
+
+            <button onclick="chooseMood('Quality Time')">Quality Time</button>
+
+            <button onclick="chooseMood('Mind Activity')">Mind Activity</button>
+
+            <button onclick="chooseMood('Pool Party')">Pool Party</button>
+
+            <button onclick="chooseMood('Gaming Cafe')">Gaming Cafe</button>
+
+            <button onclick="chooseMood('Pub/Club')">Pub / Club</button>
+
+        </div>
+
+        <p id="moodMessage"></p>
+
+        <button class="mood-next-btn" onclick="nextMood()">
+            Next →
+        </button>
+
+    </div>
+
+</section>
+<!-- PEOPLE & BUDGET SECTION -->
+<section class="people-budget-section" id="peopleBudgetSection">
+
+    <div class="people-budget-card">
+
+        <p class="small-text">
+            Discover the best value for money stuff nearby
+        </p>
+
+        <h2>Number of people and budget</h2>
+
+        <h3>Number of People</h3>
+
+        <div class="people-list">
+            <button onclick="choosePeople('2')">2</button>
+            <button onclick="choosePeople('4-6')">4-6</button>
+            <button onclick="choosePeople('6-10')">6-10</button>
+            <button onclick="choosePeople('10-15')">10-15</button>
+            <button onclick="choosePeople('15+')">15+</button>
+        </div>
+
+        <h3>Budget</h3>
+
+        <div class="budget-list">
+            <button onclick="chooseBudget('500-1000')">₹500-1000</button>
+            <button onclick="chooseBudget('1000-2000')">₹1000-2000</button>
+            <button onclick="chooseBudget('2000-3000')">₹2000-3000</button>
+            <button onclick="chooseBudget('3000-4000')">₹3000-4000</button>
+            <button onclick="chooseBudget('4000+')">₹4000+</button>
+        </div>
+
+        <p id="peopleBudgetMessage"></p>
+
+        <button class="people-next-btn" onclick="nextPeopleBudget()">
+            Next →
+        </button>
+
+    </div>
+
+</section>
+<!-- RESULTS SECTION -->
+<section class="results-section" id="resultsSection">
+
+    <div class="results-card">
+
+        <p class="small-text">
+            Discover the best value for money stuff nearby
+        </p>
+
+        <h2>Places that get what you need.</h2>
+
+        <div class="brief-box">
+            <h3>Your brief</h3>
+
+            <p>City: <span id="resultCity">-</span></p>
+            <p>Mood: <span id="resultMood">-</span></p>
+            <p>People: <span id="resultPeople">-</span></p>
+            <p>Budget: ₹<span id="resultBudget">-</span></p>
+
+            <button class="edit-btn" onclick="editRequirement()">
+                Edit Requirement
+            </button>
+        </div>
+
+        <button class="apply-btn" onclick="applyFilters()">
+            APPLY FILTERS
+        </button>
+
+        <div class="filter-row">
+            <div>
+                <h3>VENUE TYPE</h3>
+                <select id="venueType">
+                    <option value="">All Venues</option>
+                    <option value="Restaurant">Restaurant</option>
+                    <option value="Cafe">Cafe</option>
+                    <option value="Party">Party</option>
+                    <option value="Gaming Cafe">Gaming Cafe</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>SORT BY</h3>
+                <select id="sortBy">
+                    <option value="">Recommended</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="clear-btn" onclick="clearFilters()">
+            CLEAR ALL
+        </button>
+
+        <div id="filterMessage"></div>
+
+    </div>
+
+</section>
+<!-- VENUE CARDS -->
+
+<div class="venue-results">
+
+    <div class="venue-card">
+        <div class="venue-image">
+    <img src="restaurant.png" alt="Restaurant">
+</div>
+        <div class="venue-info">
+            <span>Restaurant</span>
+            <h3>Royal Restaurant</h3>
+            <p>Good food • Family friendly</p>
+            <p>₹500 - ₹1500</p>
+
+            <button onclick="bookVenue('Royal Restaurant')">
+                View & Book
+            </button>
+        </div>
+    </div>
+
+
+    <div class="venue-card">
+        <div class="venue-image">
+    <img src="cafe.jpg" alt="Cafe Moments">
+</div>
+
+        <div class="venue-info">
+            <span>Cafe</span>
+            <h3>Cafe Moments</h3>
+            <p>Relaxing place • Quality time</p>
+            <p>₹500 - ₹1200</p>
+
+            <button onclick="bookVenue('Cafe Moments')">
+                View & Book
+            </button>
+        </div>
+    </div>
+
+
+    <div class="venue-card">
+        <div class="venue-image">
+    <img src="party.png" alt="Urban Party House">
+</div>
+
+        <div class="venue-info">
+            <span>Party</span>
+            <h3>Urban Party House</h3>
+            <p>Party • Music • Friends</p>
+            <p>₹1000 - ₹3000</p>
+
+            <button onclick="bookVenue('Urban Party House')">
+                View & Book
+            </button>
+        </div>
+    </div>
+
+
+    <div class="venue-card">
+        <div class="venue-image">
+    <img src="gaming.png" alt="Game Zone">
+</div>
+        <div class="venue-info">
+            <span>Gaming Cafe</span>
+            <h3>Game Zone</h3>
+            <p>Gaming • Fun • Friends</p>
+            <p>₹500 - ₹2000</p>
+
+            <button onclick="bookVenue('Game Zone')">
+                View & Book
+            </button>
+        </div>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+<!-- BOOKING SECTION -->
+<div class="booking-popup" id="bookingPopup">
+
+    <div class="booking-box">
+
+        <button class="close-booking" onclick="closeBooking()">×</button>
+
+        <p class="small-text">Sushmap Booking</p>
+
+        <h2 id="bookingVenueName">Venue Name</h2>
+
+        <p>Ready to book this place?</p>
+
+        <button class="confirm-booking" onclick="confirmBooking()">
+            Confirm Booking
+        </button>
+
+    </div>
+
+</div>
+<!-- LOGIN / SIGN UP SECTION -->
+<section class="login-section" id="loginSection">
+
+    <div class="login-card">
+
+        <p class="small-text">Welcome to Sushmap</p>
+
+        <h2>Login / Sign Up</h2>
+
+        <input
+            type="text"
+            id="userName"
+            placeholder="Enter your name"
+        >
+
+        <input
+            type="email"
+            id="userEmail"
+            placeholder="Enter your email"
+        >
+
+        <button class="login-submit-btn" onclick="submitLogin()">
+            Continue
+        </button>
+
+        <button class="login-close-btn" onclick="closeLogin()">
+            Back
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+
+</section>
+<!-- WELCOME / PROFILE SECTION -->
+<section class="profile-section" id="profileSection">
+
+    <div class="profile-card">
+
+        <p class="small-text">Welcome to Sushmap</p>
+
+        <h2 id="welcomeName">Welcome!</h2>
+
+        <p class="profile-subtitle">
+            Your profile is ready.
+        </p>
+
+        <div class="profile-option">
+            <span>👤</span>
+            <div>
+                <h3>Profile Settings</h3>
+                <p>Manage your profile details</p>
+            </div>
+        </div>
+
+        <button class="profile-continue-btn" onclick="continueFromProfile()">
+            Explore Sushmap →
+        </button>
+
+    </div>
+
+</section>
+<!-- EXPLORE SECTION -->
+<section class="explore-section" id="exploreSection">
+
+    <div class="explore-card">
+
+        <p class="small-text">
+            Discover the best value for money stuff nearby
+        </p>
+
+        <h1>
+            Place, taste,<br>
+            <span>Budget found.</span>
+        </h1>
+
+        <p class="explore-description">
+            Find the perfect place according to your mood,
+            budget and requirements.
+        </p>
+
+        <button class="find-btn" onclick="findPlaces()">
+            Find My Places
+        </button>
+
+    </div>
+
+</section>
+<!-- MY BOOKINGS SECTION -->
+<section class="bookings-section" id="bookingsSection">
+
+    <div class="bookings-card">
+
+        <p class="small-text">Sushmap</p>
+
+        <h2>My Bookings</h2>
+
+        <div id="bookingsList">
+            <p class="no-booking">No bookings yet.</p>
+        </div>
+
+        <button class="back-home-btn" onclick="showExplore()">
+            Back to Explore
+        </button>
+
+    </div>
+
+</section>
+<!-- SUPPORT SECTION -->
+<section class="support-section" id="supportSection">
+
+    <div class="support-card">
+
+        <p class="small-text">Sushmap Support</p>
+
+        <h2>How can we help?</h2>
+
+        <div class="support-option">
+            <h3>📧 Email Support</h3>
+            <p>support@sushmap.com</p>
+        </div>
+
+        <div class="support-option">
+            <h3>📞 Phone Support</h3>
+            <p>+91 00000 00000</p>
+        </div>
+
+        <div class="support-option">
+            <h3>❓ Frequently Asked Questions</h3>
+            <p>Need help with bookings or finding a place?</p>
+        </div>
+
+        <button class="back-home-btn" onclick="showExplore()">
+            Back to Explore
+        </button>
+
+    </div>
+
+</section>
+</body>
+</html>
